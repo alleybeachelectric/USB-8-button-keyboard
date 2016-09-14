@@ -1,16 +1,113 @@
-Partlist exported from C:/Users/Scott/Documents/USB-8-button-keyboard/usb 8 button keyboard/usb 8 button keyboard.sch at 9/2/2016 1:17 PM
-
-Qty Value         Device                  Package          Parts                                      Description                                                                                                   PROD_ID     VALUE     
-1                 LEDCHIP-LED0603         CHIP-LED0603     PAGE                                       LED                                                                                                                                 
-1                 USB-AB                  USB-AB-MICRO-SMD MUSB                                       This is a USB AB connector that is compatible with USB OTG. i.e. this connector can serve as a host or device                       
-9   100           R-US_R0402              R0402            R2, R3, R4, R5, R6, R7, R8, R9, R10        RESISTOR, American symbol                                                                                                           
-1   100nF         C-USC0402               C0402            C3                                         CAPACITOR, American symbol                                                                                                          
-1   10K           R-US_R0402              R0402            R1                                         RESISTOR, American symbol                                                                                                           
-1   16MHZ         RESONATOR16MHZ          RESONATOR-SMD    Y1                                         Resonator                                                                                                     XTAL-08900  16MHZ     
-1   1uF           C-USC0402               C0402            C1                                         CAPACITOR, American symbol                                                                                                          
-1   4.7uF         C-USC0402               C0402            C2                                         CAPACITOR, American symbol                                                                                                          
-1   ATMEGA32U4-AU ATMEGA32U4-AU           TQFP44           U1                                         http://www.ladyada.net/library/eagle                                                                                                
-1   AVRISP-6      AVRISP-6                AVRISP           ISP1                                       AVR ISP HEADER                                                                                                                      
-1   BAT20JFILM    BAT20JFILM              SOD-323          D1                                         23V, 1A Schottky diode, SOD-323 package                                                                       DIO-11623   BAT20JFILM
-8   CHERRY-MX-LED CHERRY-MX-LED           CHERRY-MX-LED    U$6, U$7, U$8, U$9, U$10, U$11, U$12, U$13 Cherry MX series keyswitch with LED                                                                                                 
-1   MMBT2222A     TRANSISTOR_NPNMMBT2222A SOT23-3          Q1                                         Generic NPN BJT                                                                                               TRANS-08049 MMBT2222A 
+%
+M48
+M72
+T01C0.01500
+T02C0.03543
+T03C0.04000
+T04C0.05906
+T05C0.06750
+T06C0.11024
+T07C0.11811
+T08C0.15750
+%
+T01
+X85472Y9598
+X98972Y9098
+X111972Y7098
+X125472Y11098
+X143972Y15098
+X149972Y32098
+X155472Y32098
+X142972Y42598
+X150472Y46098
+X145472Y56598
+X140472Y59598
+X135472Y63598
+X142972Y66598
+X127972Y75598
+X90472Y67598
+X81472Y58598
+X77972Y47598
+X82972Y44598
+X71972Y38098
+X111972Y44598
+X240472Y60098
+X305472Y77598
+X257972Y93098
+X166472Y96598
+X172972Y132598
+X169972Y148598
+T02
+X56472Y18598
+X46472Y18598
+X36472Y18598
+X36472Y8598
+X46472Y8598
+X56472Y8598
+T03
+X199449Y26094
+X209449Y26094
+X274252Y26094
+X284252Y26094
+X349055Y26094
+X359055Y26094
+X423858Y26094
+X433858Y26094
+X433858Y100898
+X423858Y100898
+X359055Y100898
+X349055Y100898
+X284252Y100898
+X274252Y100898
+X209449Y100898
+X199449Y100898
+T04
+X189449Y125898
+X214449Y135898
+X264252Y125898
+X289252Y135898
+X339055Y125898
+X364055Y135898
+X413858Y125898
+X438858Y135898
+X438858Y61094
+X413858Y51094
+X364055Y61094
+X339055Y51094
+X289252Y61094
+X264252Y51094
+X214449Y61094
+X189449Y51094
+T05
+X184449Y41094
+X224449Y41094
+X259252Y41094
+X299252Y41094
+X334055Y41094
+X374055Y41094
+X408858Y41094
+X448858Y41094
+X448858Y115898
+X408858Y115898
+X374055Y115898
+X334055Y115898
+X299252Y115898
+X259252Y115898
+X224449Y115898
+X184449Y115898
+T06
+X23516Y10567
+X28472Y141598
+T07
+X241850Y77401
+X391457Y77401
+T08
+X428858Y41094
+X354055Y41094
+X279252Y41094
+X204449Y41094
+X204449Y115898
+X279252Y115898
+X354055Y115898
+X428858Y115898
+M30
