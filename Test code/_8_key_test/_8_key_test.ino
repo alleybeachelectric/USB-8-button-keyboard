@@ -64,7 +64,7 @@ void loop()
 
 
 {
-  // Check the first key. If it is pressed, wait 5ms
+  // Check the first key (previous). If it is pressed, wait 5ms
   if (digitalRead(SW0) == LOW)
   {
     delay(5);
@@ -78,7 +78,7 @@ void loop()
 
       // Send key
       Keyboard.press(ctrlKey);
-      Keyboard.press(KEY_PAGE_UP);
+      Keyboard.press(209);
       Keyboard.releaseAll();
       delay(100);
       // Sit here while key is still pressed, sending charatcer only once
@@ -87,7 +87,7 @@ void loop()
   }
 
 
-  // Check second key
+  // Check second key (next)
   else if (digitalRead(SW1) == LOW)
   {
     delay(5);
@@ -95,12 +95,15 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('1');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(210);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW1) == LOW) { }
     }
   }
 
-  // Check third key
+  // Check third key (mute)
   else if (digitalRead(SW2) == LOW)
   {
     delay(5);
@@ -108,12 +111,15 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('2');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(205);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW2) == LOW) { }
     }
   }
 
-  // Check fourth key
+  // Check fourth key (volume down)
   else if (digitalRead(SW3) == LOW)
   {
     delay(5);
@@ -121,12 +127,15 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 0;
-      Keyboard.print('3');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(214);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW3) == LOW) { }
     }
   }
 
- // Check third key
+ // Check fifth key (volume up)
   else if (digitalRead(SW4) == LOW)
   {
     delay(5);
@@ -134,12 +143,15 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('4');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(211);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW4) == LOW) { }
     }
   }
 
-   // Check third key
+   // Check sixth key (play/pause)
   else if (digitalRead(SW5) == LOW)
   {
     delay(5);
@@ -147,12 +159,15 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('5');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(213);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW5) == LOW) { }
     }
   }
   
-   // Check third key
+   // Check seventh key (stop)
   else if (digitalRead(SW6) == LOW)
   {
     delay(5);
@@ -160,13 +175,16 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('6');
+      Keyboard.press(ctrlKey);
+      Keyboard.press(212);
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW6) == LOW) { }
     }
   }
 
   
-   // Check third key
+   // Check eighth key (page select) does nothing.
   else if (digitalRead(SW7) == LOW)
   {
     delay(5);
@@ -174,7 +192,10 @@ void loop()
     {
       analogWrite(BACKLIGHT,200);
       backlightCounter = 201;
-      Keyboard.print('7');
+      Keyboard.press(ctrlKey);
+     //Keyboard.press();
+      Keyboard.releaseAll();
+      delay(100);
       while(digitalRead(SW7) == LOW) { }
     }
   }
