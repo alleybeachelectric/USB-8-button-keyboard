@@ -3365,6 +3365,8 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="PAGE" library="adafruit" deviceset="LED" device="CHIP-LED0603"/>
 <part name="R10" library="cheeper" deviceset="R-US_" device="R0402" value="100"/>
 <part name="SUPPLY5" library="cheeper" deviceset="VCC5V" device=""/>
+<part name="U$15" library="cherrymx" deviceset="CHERRY-MX-LED" device=""/>
+<part name="R11" library="cheeper" deviceset="R-US_" device="R0402" value="100"/>
 </parts>
 <sheets>
 <sheet>
@@ -3411,6 +3413,8 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <instance part="PAGE" gate="G$1" x="144.78" y="104.14"/>
 <instance part="R10" gate="G$1" x="144.78" y="91.44" rot="R90"/>
 <instance part="SUPPLY5" gate="+5V" x="144.78" y="111.76"/>
+<instance part="U$15" gate="G$1" x="403.86" y="66.04"/>
+<instance part="R11" gate="G$1" x="424.18" y="76.2" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3633,6 +3637,15 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <junction x="388.62" y="55.88"/>
 <junction x="381" y="86.36"/>
 <pinref part="U$14" gate="M" pin="GND"/>
+<pinref part="U$15" gate="G$1" pin="SW2"/>
+<wire x1="393.7" y1="63.5" x2="391.16" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="63.5" x2="391.16" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="55.88" x2="388.62" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="U$15" gate="G$1" pin="LED2"/>
+<wire x1="421.64" y1="63.5" x2="424.18" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="424.18" y1="63.5" x2="424.18" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="424.18" y1="55.88" x2="391.16" y2="55.88" width="0.1524" layer="91"/>
+<junction x="391.16" y="55.88"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -3927,19 +3940,23 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <junction x="289.56" y="111.76"/>
 <junction x="248.92" y="111.76"/>
 <junction x="246.38" y="111.76"/>
+<wire x1="424.18" y1="111.76" x2="383.54" y2="111.76" width="0.1524" layer="91"/>
+<junction x="383.54" y="111.76"/>
+<pinref part="R11" gate="G$1" pin="2"/>
+<wire x1="424.18" y1="81.28" x2="424.18" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PLED" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PD5(XCK/CTS)"/>
-<wire x1="132.08" y1="127" x2="142.24" y2="127" width="0.1524" layer="91"/>
-<label x="139.7" y="127" size="1.778" layer="95"/>
-</segment>
 <segment>
 <wire x1="144.78" y1="83.82" x2="152.4" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="83.82" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 <label x="149.86" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PF7(ADC7(TDI)"/>
+<wire x1="132.08" y1="175.26" x2="144.78" y2="175.26" width="0.1524" layer="91"/>
+<label x="139.7" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -3947,6 +3964,28 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <pinref part="PAGE" gate="G$1" pin="C"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="99.06" x2="144.78" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U$15" gate="G$1" pin="LED1"/>
+<wire x1="421.64" y1="68.58" x2="424.18" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R11" gate="G$1" pin="1"/>
+<wire x1="424.18" y1="68.58" x2="424.18" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SW8" class="0">
+<segment>
+<pinref part="U$15" gate="G$1" pin="SW1"/>
+<wire x1="393.7" y1="68.58" x2="391.16" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="68.58" x2="391.16" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="73.66" x2="401.32" y2="73.66" width="0.1524" layer="91"/>
+<label x="396.24" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PC7(ICP3/CLK0/OC4A)"/>
+<wire x1="132.08" y1="160.02" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
+<label x="139.7" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
