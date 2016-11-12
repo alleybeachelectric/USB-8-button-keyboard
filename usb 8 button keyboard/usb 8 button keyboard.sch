@@ -3316,6 +3316,49 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="ChipTestJig">
+<packages>
+<package name="FIDUCIAL_1MM">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+</package>
+</packages>
+<symbols>
+<symbol name="DOT">
+<circle x="0" y="0" radius="1" width="0.254" layer="94"/>
+<text x="0" y="-2.54" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL" prefix="FD">
+<gates>
+<gate name="G$1" symbol="DOT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FIDUCIAL_1MM">
+<technologies>
+<technology name="">
+<attribute name="ASSEMBLE" value="N.C" constant="no"/>
+<attribute name="DESCRIPTION" value="Fiducial" constant="no"/>
+<attribute name="PART_NUMBER" value="RB00000042" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3367,6 +3410,10 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <part name="SUPPLY5" library="cheeper" deviceset="VCC5V" device=""/>
 <part name="U$15" library="cherrymx" deviceset="CHERRY-MX-LED" device=""/>
 <part name="R11" library="cheeper" deviceset="R-US_" device="R0402" value="100"/>
+<part name="FD1" library="ChipTestJig" deviceset="FIDUCIAL" device=""/>
+<part name="FD2" library="ChipTestJig" deviceset="FIDUCIAL" device=""/>
+<part name="FD3" library="ChipTestJig" deviceset="FIDUCIAL" device=""/>
+<part name="FD4" library="ChipTestJig" deviceset="FIDUCIAL" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3415,6 +3462,10 @@ MMBT5088LT1G - TRANS-11160 (SOT-23, 50 mA 30V)&lt;br&gt;
 <instance part="SUPPLY5" gate="+5V" x="144.78" y="111.76"/>
 <instance part="U$15" gate="G$1" x="403.86" y="66.04"/>
 <instance part="R11" gate="G$1" x="424.18" y="76.2" rot="R90"/>
+<instance part="FD1" gate="G$1" x="414.02" y="271.78"/>
+<instance part="FD2" gate="G$1" x="419.1" y="271.78"/>
+<instance part="FD3" gate="G$1" x="414.02" y="266.7"/>
+<instance part="FD4" gate="G$1" x="419.1" y="266.7"/>
 </instances>
 <busses>
 </busses>
