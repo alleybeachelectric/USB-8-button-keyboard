@@ -187,7 +187,7 @@ void loop()
     delay(5);
     if (digitalRead(SW7) == LOW)
     {
-    buttonPresses++; 
+      buttonPresses++; 
       while(digitalRead(SW7) == LOW) { }
     }
     if (buttonPresses == 2) buttonPresses = 0;
